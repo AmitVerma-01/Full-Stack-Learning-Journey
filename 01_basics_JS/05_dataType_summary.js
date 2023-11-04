@@ -25,7 +25,7 @@ const myObj={
     university: "BBD University",
     age:  19,
 }
-console.log(myObj.name);
+// console.log(myObj.name);
 
 /* 
 Return type of variables in JavaScript
@@ -43,3 +43,32 @@ Return type of variables in JavaScript
        Function  => object function
        Object  =>  function
 */
+
+
+/* ********************************************** stack and heap memory ******************************************************* */
+
+// stack ( primitive )
+// heap ( non-primitive ) passed by reference 
+
+let Name="Amit verma"
+let anotherName=Name
+
+// console.log(Name);
+// console.log(anotherName);
+
+anotherName="Annu"
+console.log(Name);
+console.log(anotherName);
+
+let userOne={
+    username : "amitvermup57",
+    Email : "Amitverma12@gmail.com"
+
+}
+
+let userTwo = userOne
+
+userTwo.Email="annu@gmail.com"
+
+console.log(userOne);
+console.log(userTwo);
