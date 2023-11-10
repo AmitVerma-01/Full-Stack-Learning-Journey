@@ -28,7 +28,7 @@ console.log((newDate.getTime()));
 let time = (newDate.getTime());
 console.log(new Date(time).toString());
 console.log((newDate.getHours()));
-console.log((newDate.getMinutes()));
-console.log((newDate.getSeconds()));
+// console.log((newDate.getMinutes()));
+// console.log((newDate.getSeconds()));
 
 console.log(new Date(1013470826000).toUTCString());
