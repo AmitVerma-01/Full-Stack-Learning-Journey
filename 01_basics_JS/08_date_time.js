@@ -16,7 +16,7 @@ let darDate= new Date("01-01-2004") //must be in  MM/DD/YYYY formate
 console.log(darDate.toDateString());
 
 let myTimeStamp = Date.now();
-console.log(myTimeStamp);
+console.log(new Date(myTimeStamp).toString());
 console.log(myCreatedate.getTime());
 
 console.log(Math.floor(Date.now()/1000));
