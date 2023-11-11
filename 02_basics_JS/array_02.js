@@ -1,15 +1,15 @@
 const mcu_heros = ["ironman", "spiderman", "blackwidow"]
 const dc_heros = ["aqua man", "super man" ] 
 
-// console.log(mcu_heros);
-// console.log(dc_heros);
+console.log(mcu_heros);
+console.log(dc_heros);
 
-// mcu_heros.push(dc_heros);
-// let allHeros = mcu_heros.concat(dc_heros)
-// console.log(allHeros);
+mcu_heros.push(dc_heros);
+let allHeros = mcu_heros.concat(dc_heros)
+console.log(allHeros);
 
 
-// console.log(mcu_heros[3][0]);
+console.log(mcu_heros[3][0]);
 
 const allNewHeros = [...mcu_heros , ...dc_heros]
 console.log(allNewHeros);
