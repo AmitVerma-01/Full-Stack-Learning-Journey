@@ -11,3 +11,19 @@ const {coursePrice : rate} = course;
 
 console.log(teacher);
 console.log(rate);
+
+//API
+
+//JSON structure
+// {
+//     "name" : "Amit",
+//     "courseName" : "hindi",
+//     "coursePrice" : "free"
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
+
