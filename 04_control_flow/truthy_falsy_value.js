@@ -29,3 +29,7 @@ console.log(val);
 console.log(val2);
 console.log(val3);
 console.log(val4);
+
+// terniary operator
+// condition ? true : false
+
