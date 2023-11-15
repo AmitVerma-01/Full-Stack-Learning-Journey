@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | chaiaur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lanName){
+         const addli = document.createElement('li')
+         addli.innerHTML = `${lanName}`
+         document.querySelector('.language').appendChild(addli);
+    }
+    addLanguage("CPP");
+    addLanguage("Python")
+    // addLanguage("")
+
+    function addOptiLanguage(langName){
+        const li= document.createElement('li');
+        const addText = document.createTextNode(langName);
+        li.appendChild(addText);
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage("Ruby");
+    addOptiLanguage("HTML");
+
+    //Edit 
+    const secLang = document.querySelector("li:nth-child(2)")
+    // secLang.innerHTML="Mojo";
+    const newLi =document.createElement('li')
+    newLi.textContent = "Mojo"
+    // console.log(newLi);
+    secLang.replaceWith(newLi)
+
+    //edit 
+    const firLang=document.querySelector('li:first-child')
+    firLang.outerHTML='<li>TypeScript</li>'
+
+    //Remove
+
+    let lastLang = document.querySelector('li:last-child');
+    lastLang.remove();
+    // lastLang = document.querySelector('li:last-child');
+    // lastLang.remove();
+
+</script>
+</html>
