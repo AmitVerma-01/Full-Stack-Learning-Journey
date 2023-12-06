@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API request</title>
+    <style>
+        div{
+            height: fit-content;
+            max-width: 250px;
+            width: fit-content;
+            border: 2px solid blue;
+            background-color: #e6dada;
+            margin: auto;
+            border-radius: 20px;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            /* margin-left: 25px ; */
+            margin-left: 25px;
+            margin-top: 10px;
+            border-radius: 50%;
+        }
+        h2{
+            text-align: center;
+            color: #000;
+            display: inline-block;
+            margin-left: 65px;
+            box-shadow: 5px 3px 4px;
+        }
+        p{
+            text-align: center;
+            color: #000;
+        }
+    </style>
+</head>
+<body style="background-color: #212121;">
+    
+</body>
+<script>
+    let photo;
+    let name1;
+    const xhr = new XMLHttpRequest();
+    let requestUrl = 'https://api.github.com/users/amitverma-01'
+    xhr.open('GET' , requestUrl);
+    xhr.onreadystatechange = ()=>{
+        if(xhr.readyState === 4 ){
+            const data = JSON.parse(xhr.responseText);
+            photo= data.avatar_url
+            name1=data.name
+            // console.log();
+            const card = document.createElement('div');
+            document.body.appendChild(card)
+            let img = document.createElement('img')
+            card.appendChild(img)
+            img.setAttribute('src',photo)
+            let text = document.createElement('h2')
+            text.textContent=`${name1}`;
+            card.appendChild(text)
+            let bio = document.createElement('p')
+            bio.textContent=`${data.bio}`;
+            card.appendChild(bio)
+            
+            // console.log(data);
+        }
+    }
+    
+    
+    xhr.send();
+
+</script>
+</html>

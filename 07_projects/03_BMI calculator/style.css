@@ -1,8 +1,13 @@
+body{
+  background-color: #797978;
+
+}
 .container {
+  margin: auto;
     width: 575px;
     height: 825px;
   
-    background-color: #797978;
+    /* background-color: #797978; */
     padding-left: 30px;
   }
   #height,
